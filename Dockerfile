@@ -19,4 +19,4 @@ RUN echo "$UNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 RUN echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 RUN npm i -g npm@8.5.1
-RUN npm i -g pnpm
+RUN npm i -g pnpm@6.31
