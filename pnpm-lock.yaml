@@ -10,9 +10,11 @@ specifiers:
   '@testing-library/user-event': ^13.5.0
   '@types/jest': ^27.4.0
   '@types/node': ^16.11.25
+  '@types/node-osc': ^6.0.0
   '@types/react': ^17.0.39
   '@types/react-dom': ^17.0.11
   autoprefixer: ^10.0.2
+  node-osc: ^6.1.14
   postcss: ^8.4.6
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -28,6 +30,7 @@ dependencies:
   '@types/node': 16.11.25
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
+  node-osc: 6.1.14
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-scripts: 5.0.0_5cffe7b5ed4374ff6943e70f25c38a15
@@ -39,6 +42,7 @@ devDependencies:
   '@babel/plugin-syntax-flow': 7.16.7_@babel+core@7.17.5
   '@babel/plugin-transform-react-jsx': 7.17.3_@babel+core@7.17.5
   '@testing-library/dom': 7.21.4
+  '@types/node-osc': 6.0.0
   autoprefixer: 10.4.2_postcss@8.4.6
   postcss: 8.4.6
 
@@ -2217,6 +2221,10 @@ packages:
     resolution: {integrity: sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==}
     dev: false
 
+  /@types/node-osc/6.0.0:
+    resolution: {integrity: sha512-25DwJOFe1KueUZz2oIURT3qCMQ28Jdvy9JqGz8d0mKM1Mlx0agHD9N3S0hMKajVCjw7TGtf3gGjbl5gDCFfIWQ==}
+    dev: true
+
   /@types/node/16.11.25:
     resolution: {integrity: sha512-NrTwfD7L1RTc2qrHQD4RTTy4p0CO2LatKBEKEds3CaVuhoM/+DJzmWZl5f+ikR8cm8F5mfJxK+9rQq07gRiSjQ==}
     dev: false
@@ -3085,6 +3093,10 @@ packages:
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /binpack/0.1.0:
+    resolution: {integrity: sha1-vT0JdMPyoERuF99PYLVacqIFqX4=}
     dev: false
 
   /bluebird/3.7.2:
@@ -6467,6 +6479,13 @@ packages:
     resolution: {integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=}
     dev: false
 
+  /node-osc/6.1.14:
+    resolution: {integrity: sha512-TGJ0ll6B//Ys5AnNbltmlM3rvtQ5DSIU/pQlOiJnqnx7FBWCwp9gXzVEODcccuks6HJ/+pjTRNbHKFXfgC9sVQ==}
+    engines: {node: ^12.22 || ^14.13 || >=16}
+    dependencies:
+      osc-min: 1.1.2
+    dev: false
+
   /node-releases/2.0.2:
     resolution: {integrity: sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg==}
 
@@ -6647,6 +6666,13 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
       word-wrap: 1.2.3
+    dev: false
+
+  /osc-min/1.1.2:
+    resolution: {integrity: sha512-8DbiO8ME85R75stgNVCZtHxB9MNBBNcyy+isNBXrsFeinXGjwNAauvKVmGlfRas5VJWC/mhzIx7spR2gFvWxvg==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      binpack: 0.1.0
     dev: false
 
   /p-limit/1.3.0:
