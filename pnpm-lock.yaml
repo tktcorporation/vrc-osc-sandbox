@@ -1,19 +1,23 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/node-osc': ^6.0.0
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
   '@vitejs/plugin-react': ^1.0.7
+  node-osc: ^6.1.14
   react: ^17.0.2
   react-dom: ^17.0.2
   typescript: ^4.5.4
   vite: ^2.8.0
 
 dependencies:
+  node-osc: 6.1.14
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
 devDependencies:
+  '@types/node-osc': 6.0.0
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
   '@vitejs/plugin-react': 1.2.0
@@ -314,6 +318,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/node-osc/6.0.0:
+    resolution: {integrity: sha512-25DwJOFe1KueUZz2oIURT3qCMQ28Jdvy9JqGz8d0mKM1Mlx0agHD9N3S0hMKajVCjw7TGtf3gGjbl5gDCFfIWQ==}
+    dev: true
+
   /@types/prop-types/15.7.4:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
@@ -358,6 +366,10 @@ packages:
     dependencies:
       color-convert: 1.9.3
     dev: true
+
+  /binpack/0.1.0:
+    resolution: {integrity: sha1-vT0JdMPyoERuF99PYLVacqIFqX4=}
+    dev: false
 
   /browserslist/4.19.3:
     resolution: {integrity: sha512-XK3X4xtKJ+Txj8G5c30B4gsm71s69lqXlkYui4s6EkKxuv49qjYlY6oVd+IFJ73d4YymtM3+djvvt/R/iJwwDg==}
@@ -710,6 +722,13 @@ packages:
     hasBin: true
     dev: true
 
+  /node-osc/6.1.14:
+    resolution: {integrity: sha512-TGJ0ll6B//Ys5AnNbltmlM3rvtQ5DSIU/pQlOiJnqnx7FBWCwp9gXzVEODcccuks6HJ/+pjTRNbHKFXfgC9sVQ==}
+    engines: {node: ^12.22 || ^14.13 || >=16}
+    dependencies:
+      osc-min: 1.1.2
+    dev: false
+
   /node-releases/2.0.2:
     resolution: {integrity: sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg==}
     dev: true
@@ -717,6 +736,13 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /osc-min/1.1.2:
+    resolution: {integrity: sha512-8DbiO8ME85R75stgNVCZtHxB9MNBBNcyy+isNBXrsFeinXGjwNAauvKVmGlfRas5VJWC/mhzIx7spR2gFvWxvg==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      binpack: 0.1.0
     dev: false
 
   /path-parse/1.0.7:
