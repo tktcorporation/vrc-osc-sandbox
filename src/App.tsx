@@ -1,9 +1,21 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import OSC from 'osc-js';
 
 function App() {
   const [count, setCount] = useState(0)
+  const countUp = () => {
+    setCount(count + 1)
+    // a bundle without an explicit time tag
+    const bundle = new Bundle(['/input/MoveForward', 1], ['/input/MoveRight', 2], ['/input/Jump', 3]);
+
+    // a bundle with a timetag of 10
+    // bundle.append(new Bundle(10, ['/four', 4]));
+
+    const client = new Client('127.0.0.1', 9000);
+    client.send(bundle);
+  }
 
   return (
     <div className="App">
@@ -11,7 +23,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={() => countUp()}>
             count is: {count}
           </button>
         </p>
