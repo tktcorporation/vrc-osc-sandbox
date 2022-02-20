@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  app:
+  web:
     build: .
     working_dir: /workspace
     volumes:
@@ -11,6 +11,18 @@ services:
       UID: 1000
     user: "1000:1000"
     tty: true
+  node:
+    build: ./node
+    working_dir: /workspace
+    volumes:
+      - ./node/:/workspace
+      - node_modules_node:/workspace/node_modules
+    environment:
+      GID: 1000
+      UID: 1000
+    user: "1000:1000"
+    tty: true
 
 volumes:
   node_modules:
+  node_modules_node:

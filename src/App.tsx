@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Bundle, Client } from 'node-osc';
+import OSC from 'osc-js';
 
 function App() {
   const [count, setCount] = useState(0)

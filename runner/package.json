@@ -1,0 +1,56 @@
+{
+    "name": "ateaparty-reminder",
+    "version": "0.0.1",
+    "description": "ateaparty reminder",
+    "main": "lib/main.js",
+    "devDependencies": {
+        "@graphql-codegen/cli": "2.4.0",
+        "@graphql-codegen/introspection": "2.1.1",
+        "@graphql-codegen/typescript": "2.4.2",
+        "@graphql-codegen/typescript-resolvers": "2.4.3",
+        "@types/jest": "^27.4.0",
+        "@typescript-eslint/eslint-plugin": "^5.8.1",
+        "@typescript-eslint/parser": "^5.10.1",
+        "@vercel/ncc": "^0.33.1",
+        "eslint": "^8.6.0",
+        "eslint-config-prettier": "^8.3.0",
+        "jest": "^27.4.5",
+        "prettier": "^2.5.1",
+        "ts-jest": "^27.1.2",
+        "typescript": "^4.5.4"
+    },
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"{src,test}/**/{*.ts,*.tsx,*.js,*.jsx}\"",
+        "format:check": "prettier --check \"{src,test}/**/{*.ts,*.tsx,*.js,*.jsx}\"",
+        "lint": "eslint \"{src,apps,libs,test}/**/{*.spec.ts,*.ts,*.tsx,*.js,*.jsx}\"",
+        "lint:fix": "eslint \"{src,apps,libs,test}/**/{*.ts,*.tsx,*.js,*.jsx}\" --fix",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "pack": "ncc build -m",
+        "all": "npm run format && npm run lint && npm test && npm run build && npm run pack",
+        "pre-commit": "all",
+        "exec": "npm run all && node dist/index.js",
+        "codegen": "graphql-codegen --config codegen.yml"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/tktcorporation/ateaparty-reminder.git"
+    },
+    "keywords": [
+        "health",
+        "check"
+    ],
+    "author": "tktcorporation",
+    "bugs": {
+        "url": "https://github.com/tktcorporation/ateaparty-reminder/issues"
+    },
+    "homepage": "https://github.com/tktcorporation/ateaparty-reminder#readme",
+    "dependencies": {
+        "@graphql-codegen/cli": "^2.4.0",
+        "axios": "^0.24.0",
+        "graphql": "^16.2.0",
+        "node-osc": "^6.1.14"
+    }
+}

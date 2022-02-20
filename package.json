@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.11",
     "dgram": "^1.0.1",
     "node-osc": "^6.1.14",
+    "osc-js": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
